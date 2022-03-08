@@ -7,7 +7,7 @@ const Admin = () => {
   
     return (
     <div className='colorsAdmin'>
-        Hi Darlings im Admin
+       🔱 If you are God, you are the admin ⚜️
     </div>
   )
 }

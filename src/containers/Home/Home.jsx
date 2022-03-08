@@ -7,7 +7,7 @@ const Home = () => {
   
     return (
     <div className='colorsHome'>
-        Hi Darlings im home
+        ¡AidiWooD SuperClub! <br /> <br /> Hello Welcome.<br /> <br /> Begin you experience.
     </div>
   )
 }
