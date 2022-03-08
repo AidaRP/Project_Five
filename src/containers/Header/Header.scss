@@ -1,0 +1,39 @@
+
+//---------------------------------------------------------------Header Container----------------------------------------------------------------------------------
+.colorsHeader{
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+
+    height: 6em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.headerPaint {
+    width: 33vw;
+    height: 15em;
+
+}
+
+.linksDesign {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.link {
+    margin-right: 3em;
+    margin-bottom: 1em;
+}
+
+.link:hover {
+    font-weight: bold;
+    cursor:pointer;
+}
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
