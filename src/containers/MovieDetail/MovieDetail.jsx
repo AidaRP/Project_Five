@@ -2,7 +2,7 @@ import React from 'react'
 
 import './MovieDetail.scss'
 
-const Films = () => {
+const MovieDetail = () => {
   
     return (
     <div className='colorsMovieDetail'>

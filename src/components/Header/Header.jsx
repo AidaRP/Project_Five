@@ -48,6 +48,7 @@ const Header = (props) => {
                     <div className="link" onClick={()=>surf("/register")}>Registro</div>  
                     <div className="link" onClick={()=>surf("/admin")}>Admin🌌</div>   
                     <div className="link" onClick={()=>surf("/films")}>Films🎥</div>   
+                    <div className="link" onClick={()=>surf("/moviedetail")}>MovieDetail</div>   
                 </div>
             </div>
         )

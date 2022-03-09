@@ -1,11 +1,10 @@
-// import {combineReducers} from 'redux';
+import {combineReducers} from 'redux';
 
 // import credentials from './datosLogin-reducer';
-// import search from './busquedaFilms-reducer';
+import movieDetailReducer from './movieDetail-reducer';
 
-// const rootReducer = combineReducers({
-//     credentials,
-//     search
-// });
+const rootReducer = combineReducers({
+    movieDetailReducer,
+});
 
-// export default rootReducer;
+export default rootReducer;

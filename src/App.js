@@ -12,30 +12,29 @@ import Register from './containers/Register/Register';
 import Profile from './containers/Profile/Profile';
 import Admin from './containers/Admin/Admin';
 import Films from './containers/Films/Films';
+import MovieDetail from './containers/MovieDetail/MovieDetail';
 
 
 function App() {
   return (
     <div className="App">
-      
+
       <BrowserRouter>
-      
-      <Header/>
 
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/register" element={<Register/>}/>
-        <Route path="/profile" element={<Profile/>}/>
-        <Route path="/admin" element={<Admin/>}/>
-        <Route path="/films" element={<Films/>}/>
+        <Header/>
 
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/admin" element={<Admin/>}/>
+          <Route path="/films" element={<Films/>}/>
+          <Route path="/moviedetail" element={<MovieDetail/>}/>
 
-      <Footer/>
-    
-    </BrowserRouter>
-
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
     </div>
   );
 }
