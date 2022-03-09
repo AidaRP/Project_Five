@@ -11,6 +11,7 @@ import Login from './containers/Login/Login';
 import Register from './containers/Register/Register';
 import Profile from './containers/Profile/Profile';
 import Admin from './containers/Admin/Admin';
+import Films from './containers/Films/Films';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/admin" element={<Admin/>}/>
+        <Route path="/films" element={<Films/>}/>
 
       </Routes>
 

@@ -44,9 +44,10 @@ const Header = (props) => {
                 <div className="headerPaint"></div>
                 <div className="headerPaint linksDesign">
                     <div className="link" onClick={()=>surf("/")}>🏠Home</div>
-                    <div className="link" onClick={()=>surf("/login")}>Login</div>
+                    <div className="link" onClick={()=>surf("/login")}>🎪 Login</div>
                     <div className="link" onClick={()=>surf("/register")}>Registro</div>  
-                    <div className="link" onClick={()=>surf("/admin")}>🌌</div>   
+                    <div className="link" onClick={()=>surf("/admin")}>Admin🌌</div>   
+                    <div className="link" onClick={()=>surf("/films")}>Films🎥</div>   
                 </div>
             </div>
         )
