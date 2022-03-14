@@ -13,7 +13,7 @@ import Profile from './containers/Profile/Profile';
 import Admin from './containers/Admin/Admin';
 import Films from './containers/Films/Films';
 import MovieDetail from './containers/MovieDetail/MovieDetail';
-
+import Rent from './components/Rent/Rent'
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
           <Route path="/admin" element={<Admin/>}/>
           <Route path="/films" element={<Films/>}/>
           <Route path="/moviedetail" element={<MovieDetail/>}/>
+          <Route path="/rent" element={<Rent/>}/>
 
         </Routes>
         <Footer/>

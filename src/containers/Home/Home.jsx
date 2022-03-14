@@ -86,7 +86,9 @@ const Home = (props) => {
               //para que nos traiga únicamente el objeto seleccionado en el mapeo
               <div className="filmPoster" key={movie.id} onClick={()=>chooseMovie(movie)}>
                 <img className="imgColors"src={root + movie.poster_path} alt={movie.title}/>
-                <span> </span>
+                <div className="filmHomeTitle">
+                  {/* <span src={rootTitle + movie.title}>Titulo</span> */}
+                </div>
               </div>
             )
           })
@@ -97,7 +99,7 @@ const Home = (props) => {
     return (
       <div className='colorsHome'>
         <div className='Loader'>
-          <img src={require('../../img/Loader.gif')} alt="Loader"/>
+          <img src={require('../../img/spinner_URF.gif')} alt="Loader"/>
         </div>
       </div>
     )
