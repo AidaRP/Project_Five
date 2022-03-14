@@ -26,28 +26,36 @@ import './Home.scss';
 
 const Home = (props) => {
 
-  const [films, setFilms] = useState([]);
+  const [peliculas, setPeliculas] = useState([]);
   let surf = useNavigate();
 
   useEffect(() =>{
     getMovies();
+    console.log('Home se ha montado por primera vez')
   },[])
 
   useEffect(()=>{
-    console.log("Las movies han cambiado", films);
-  },[films]);
+    console.log("Cualquier cosa de home ha cambiado");
+  });
+
+  useEffect(()=>{
+    console.log("Las movies han cambiado", peliculas);
+  },[peliculas]);
+
+
 
   const getMovies = async () => {
 
     try {
 
-      let res = await axios.get('https://filmsapiprojectfour.herokuapp.com/') // !TODO backend arreglar eso
+      let res = await axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-US&page={7}')
+      
 
       //Guardamos los datos que hemos traido del backend arriba en un hook de esta forma 
       //los datos(pelis) estarán disponibles para los return del componente.
 
       setTimeout(()=>{
-        setFilms(res.data.results);
+        setPeliculas(res.data.results);
       },2000);
 
     } catch (error) {
@@ -67,17 +75,18 @@ const Home = (props) => {
     surf("/moviedetail");
   }
 
-  if (films[0]?.id !== undefined) {
+  if (peliculas[0]?.id !== undefined) {
     return(
       <div className='colorsDetail'>
         {/* Hacemos el mapeo de las pelis */}
-        {films.map(movie => {
+        {peliculas.map(movie => {
             //cada elemento del mapeo recibirá un KEY único para distinguirlos
             return (
               //Le damos a las pelis mapeadas el onClick 
               //para que nos traiga únicamente el objeto seleccionado en el mapeo
-              <div key={movie.id} onClick={()=>chooseMovie(movie)}>
-                <img src={root + movie.poster_path} alt={movie.title}/>
+              <div className="filmPoster" key={movie.id} onClick={()=>chooseMovie(movie)}>
+                <img className="imgColors"src={root + movie.poster_path} alt={movie.title}/>
+                <span> </span>
               </div>
             )
           })

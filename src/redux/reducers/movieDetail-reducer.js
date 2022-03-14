@@ -1,7 +1,7 @@
 import { MOVIE_DETAIL } from "../types";
 
 const initialState = {
-    film: {}
+    peliculas: {}
 }
 
 const movieDetailReducer= (state = initialState, action) => {

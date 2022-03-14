@@ -3,16 +3,16 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// import { LOGOUT } from '../../redux/types';
-// import {connect} from 'react-redux';
+import { LOGOUT } from '../../redux/types';
+import {connect} from 'react-redux';
 
 import './Header.scss';
 
-<img className='Pinkact'src={require('../../img/Pink_React.gif')} />
+
 
 const Header = (props) => {
 
-  
+
     let surfing = useNavigate();
 
     useEffect(()=>{
@@ -28,27 +28,27 @@ const Header = (props) => {
     }
 
     const logOut = () => {
-    //     //Borrar de RDX las credenciales
+    //     Borrar de RDX las credenciales
     //     props.dispatch({type:LOGOUT});
 
         setTimeout(()=>{
             surfing("/");
         },1500);
     }
-    
+
     if(!props.credentials?.token){
         return (
             <div className='colorsHeader'>
-                
+
                 <div className="headerPaint"></div>
                 <div className="headerPaint"></div>
                 <div className="headerPaint linksDesign">
                     <div className="link" onClick={()=>surf("/")}>🏠Home</div>
                     <div className="link" onClick={()=>surf("/login")}>🎪 Login</div>
-                    <div className="link" onClick={()=>surf("/register")}>Registro</div>  
-                    <div className="link" onClick={()=>surf("/admin")}>Admin🌌</div>   
-                    <div className="link" onClick={()=>surf("/films")}>Films🎥</div>   
-                    <div className="link" onClick={()=>surf("/moviedetail")}>MovieDetail</div>   
+                    <div className="link" onClick={()=>surf("/register")}>Registro</div>
+                    <div className="link" onClick={()=>surf("/admin")}>Admin🌌</div>
+                    <div className="link" onClick={()=>surf("/films")}>Films🎥</div>
+                    <div className="link" onClick={()=>surf("/moviedetail")}>MovieDetail</div>
                 </div>
             </div>
         )
@@ -58,19 +58,20 @@ const Header = (props) => {
                 <div className="headerPaint"></div>
                 <div className="headerPaint"></div>
                 <div className="headerPaint linksDesign">
-                    <div className="link" onClick={()=>surf("/profile")}>{props.credentials?.usuario.nombre}</div>
-                    <div className="link" onClick={()=>logOut()}>Logout</div>    
+                    <div className="link" onClick={()=>surf("/")}>🏠Home</div>
+                    <div className="link" onClick={()=>surf("/films")}>Films🎥</div>
+                    <div className="link" onClick={()=>surf("/moviedetail")}>MovieDetail</div>
+                    <div className="link" onClick={()=>surf("/profile")}>{props.credentials?.usuario.nickname}</div>
+                    <div className="link" onClick={()=>logOut()}>Logout</div>
                 </div>
             </div>
         )
     }
 
-    
 
 }
 
-// export default connect((state)=>({
-//     credentials: state.credentials
-// }))(Header);
+export default connect((state)=>({
+    credentials: state.credentials
+}))(Header);
 
-export default Header;
