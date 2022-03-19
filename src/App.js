@@ -5,6 +5,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import RestrictArea from './security/RestrictArea';
 
 import Home from './containers/Home/Home';
 import Login from './containers/Login/Login';
@@ -14,6 +15,8 @@ import Admin from './containers/Admin/Admin';
 import Films from './containers/Films/Films';
 import MovieDetail from './containers/MovieDetail/MovieDetail';
 import Rent from './components/Rent/Rent'
+import ErrorNotFound from './components/ErrorNotFound/ErrorNotFound';
+
 
 function App() {
   return (
@@ -24,20 +27,21 @@ function App() {
         <Header/>
 
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/register" element={<Register/>}/>
-          <Route path="/films" element={<Films/>}/>
-          <Route path="/moviedetail" element={<MovieDetail/>}/>
-          <Route path="/rent" element={<Rent/>}/>
+          <Route path="/" element={<Home/> } />
+          <Route path="/login" element={<Login/> } />
+          <Route path="/register" element={<Register/> } />
+          <Route path="/films" element={<Films/> } />
+          <Route path="/moviedetail" element={<MovieDetail/> } />
+          <Route path="/rent" element={<Rent/> } />
+          <Route path="*" element={<ErrorNotFound /> }/>
 
           {/* <Route  element={<Profile/>}/>
           <Route path="/admin" element={<Admin/>}/> */}
           path="/profile"
           element={
-            <Security>
+            <RestrictArea>
               <Profile/>
-            </Security>
+            </RestrictArea>
           }
 
         </Routes>
