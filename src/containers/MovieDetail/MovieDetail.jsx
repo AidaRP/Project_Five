@@ -61,5 +61,5 @@ const MovieDetail = (props) => {
 
 export default connect((state) => ({
     credentials: state.credentials,
-    search : state.search.film
+    search : state.search?.pelicula
 }))(MovieDetail);

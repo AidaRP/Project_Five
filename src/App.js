@@ -27,11 +27,18 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
-          <Route path="/profile" element={<Profile/>}/>
-          <Route path="/admin" element={<Admin/>}/>
           <Route path="/films" element={<Films/>}/>
           <Route path="/moviedetail" element={<MovieDetail/>}/>
           <Route path="/rent" element={<Rent/>}/>
+
+          {/* <Route  element={<Profile/>}/>
+          <Route path="/admin" element={<Admin/>}/> */}
+          path="/profile"
+          element={
+            <Security>
+              <Profile/>
+            </Security>
+          }
 
         </Routes>
         <Footer/>

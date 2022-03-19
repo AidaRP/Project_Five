@@ -18,6 +18,7 @@ import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import { TAKE_FILM } from '../../redux/types';
 import { MOVIE_DETAIL } from '../../redux/types';
 import { root } from '../../utilities';
 import './Home.scss';
@@ -99,7 +100,7 @@ const Home = (props) => {
     return (
       <div className='colorsHome'>
         <div className='Loader'>
-          <img src={require('../../img/spinner_URF.gif')} alt="Loader"/>
+          <img src={require('../../img/robot_loader.gif')} alt="Loader"/>
         </div>
       </div>
     )
