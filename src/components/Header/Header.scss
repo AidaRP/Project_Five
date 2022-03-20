@@ -6,7 +6,10 @@
 
     color: rgb(255, 0, 0);
 
+    width: 100vw;
     height: 8em;
+
+    padding-left: 7em;
 
     display: flex;
     align-items: center;
@@ -18,8 +21,8 @@
     height: 10em;
 }
 .headerPaint {
-    width: 33vw;
-    height: 15em;
+    width: 3vw;
+    height: 6em;
 
 }
 
@@ -32,7 +35,7 @@
 
 .link {
     margin-right: 3em;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
 }
 
 .link:hover {

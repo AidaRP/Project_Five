@@ -33,16 +33,19 @@ function App() {
           <Route path="/films" element={<Films/> } />
           <Route path="/moviedetail" element={<MovieDetail/> } />
           <Route path="/rent" element={<Rent/> } />
+          <Route path="/profile" element={<Profile/> } />
+          <Route path="/admin" element={<Admin/> } />
           <Route path="*" element={<ErrorNotFound /> }/>
 
           {/* <Route  element={<Profile/>}/>
           <Route path="/admin" element={<Admin/>}/> */}
-          path="/profile"
+          {/* path="/profile"
           element={
             <RestrictArea>
               <Profile/>
+              <Admin/>
             </RestrictArea>
-          }
+          } */}
 
         </Routes>
         <Footer/>
