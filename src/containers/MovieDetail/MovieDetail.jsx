@@ -44,7 +44,7 @@ const MovieDetail = (props) => {
             <div className='designFilm'>
                 <div className="filmDetailHalf">
                     <div className="dataFilm">{props.search?.title}</div>
-                    <div className="dataFilm">{props.search?.sinopsis}</div>
+                    <div className="dataFilm">{props.search?.synopsis}</div>
                     <div className="dataFilm">
                         {
                             //EN CASO DE QUE TOKEN SEA TRUE, SI SE INCLUYE EL ELEMENTO RENT
