@@ -6,20 +6,14 @@ import {checkError} from '../../utilities';
 import './Register.scss';
 
 const Register = () => {
-
     let navigate = useNavigate();
-
-    
     //Hooks
-
     const [dataUser, setDataUser] = useState({
             name: "", surname: "", age: "",phone: "", adress: "", email: "", 
             password: "", password2: "", nickname:"" 
-            
     });
 
     const [msgError, setMsgError] = useState("");
-
 
     //Handler (manejador)
     const inputData = (e) => {
@@ -31,29 +25,21 @@ const Register = () => {
     //Funciones locales del componente
 
     const registerme = async () => {
-
         setMsgError("");
         let error = "";
-
         let arrayFields = Object.entries(dataUser);
-
         if(dataUser.password !== dataUser.password2){
-
             return (setMsgError("Los dos password deben de coincidir"));
-
         }else{
             setMsgError("");
         }
-
         for(let element of arrayFields){
             error = checkError(element[0],element[1]);
-
             if(error !== "ok"){
                 setMsgError(error);
                 return;
             };
         };
-
         let body = {
             name: dataUser.name,
             surname: dataUser.surname,
@@ -62,22 +48,13 @@ const Register = () => {
             adress: dataUser.adress,
             email: dataUser.email,
             password: dataUser.password,
-            nickname: dataUser.nickname
-            
+            nickname: dataUser.nickname  
         }
-
-
         try {
-            
-            let resultado = await axios.post(" https://filmsapiprojectfour.herokuapp.com/", body);
-            console.log(resultado);
-            
+          await axios.post("http://localhost:5000/usuarios", body);
                 setTimeout(()=>{
                     navigate("/login");
                 },1000);
-            
-            
-            
         } catch (error) {
             console.log(error);
         }
