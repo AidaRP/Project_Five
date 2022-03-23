@@ -29,7 +29,7 @@ const Header = (props) => {
 
     const logOut = () => {
     //     Borrar de RDX las credenciales
-    //     props.dispatch({type:LOGOUT});
+        props.dispatch({type:LOGOUT});
 
         setTimeout(()=>{
             surfing("/");

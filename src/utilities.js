@@ -4,26 +4,28 @@ export const rootTitle = "https://api.themoviedb.org/3/movie/{movie_id}/alternat
 export const checkError = (type,value) => {
 
 
-    switch (type) {
-        case 'email':
-            
-            if (! /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(value) ) {
+    switch(type) {
 
+        case 'email' :
+
+            if (! /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(value) ) {
+                
                 return "Introduce un e-mail válido";
             }else{
                 return "ok";
             };
-
-        case 'name':
             
+        
+        case 'name': 
+
             if (! /[a-z]/gi.test(value) ) {
                 return "Introduce un nombre válido";
             }else{
                 return "ok";
             };
+
         
-        
-        case 'telefono':
+        case 'phone':
 
             if (! /[\d()+-]/g.test(value) ) {
                 return "Introduce un telefono válido";
@@ -31,9 +33,9 @@ export const checkError = (type,value) => {
                 return "ok";
             };
 
-    
         default:
-                return "Introduce un e-mail válido";
-            
+            return "ok";
+        
+
     }
-}
+};
