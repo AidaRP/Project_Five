@@ -6,7 +6,9 @@ import movieDetailReducer from './movieDetail-reducer';
 import data_film from './data_film';
 
 const rootReducer = combineReducers({
-    movieDetailReducer, credentials, data_film
+    movieDetailReducer, 
+    credentials, 
+    data_film
 });
 
 export default rootReducer;

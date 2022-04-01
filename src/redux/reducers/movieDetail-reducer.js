@@ -1,14 +1,14 @@
 import { MOVIE_DETAIL } from "../types";
 
 const initialState = {
-    peliculas: {}
+    movie: {}
 }
 
 const movieDetailReducer= (state = initialState, action) => {
     switch(action.type){
         //Guardamos en el estado los datos del usuario logueado
     case MOVIE_DETAIL : 
-        return action.payload;
+        return {...state, movie: action.payload};
 
     default :
         return state

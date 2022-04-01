@@ -1,13 +1,15 @@
 import { TAKE_FILM, TAKE_DATA } from '../types';
 
 const initialState = {
-    saludo : ''
+    movie: {},
 };
 
 const data_film = (state = initialState, action) => {
     switch(action.type){
         //Ejemplo de datos
-        case TAKE_FILM :
+        // case TAKE_FILM :
+        //     return action.payload;
+        case TAKE_DATA :
             return action.payload;
 
         default : 

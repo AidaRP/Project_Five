@@ -51,7 +51,7 @@ const Register = () => {
             nickname: dataUser.nickname  
         }
         try {
-          await axios.post("http://localhost:5000/usuarios", body);
+          await axios.post("https://filmsapiprojectfour.herokuapp.com/usuarios", body);
                 setTimeout(()=>{
                     navigate("/login");
                 },1000);
