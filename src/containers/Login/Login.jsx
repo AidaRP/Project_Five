@@ -72,14 +72,14 @@ const Login = (props) => {
       
       <div className='colorsLogin'>
       
-        {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>}
+        {/* {<pre>{JSON.stringify(datosUsuario, null,2)}</pre>} */}
       <div className="colorsForm">
         <input type="email" name="email" id="email" title="email" placeholder="Escribe tu Email" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}} />
         <input type="password" name="password" id="password" title="password" placeholder="Escribe tu Password" autoComplete="off" onChange={(e)=>{rellenarDatos(e)}}  />
       {msgError}
       {msgError2}
       </div>
-      <div className="loginButton espacio" onClick={()=>login()}>Soy el puto login</div>
+      <div className="loginButton espacio" onClick={()=>login()}>COME ON!</div>
     </div>
     );
 
