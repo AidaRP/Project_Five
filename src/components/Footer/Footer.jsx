@@ -7,7 +7,7 @@ const Footer = () => {
 
     return (
         <div className="colorsFooter">
-            Aída Ródenas Derechos Reservados, Fuck off! - 2022
+            Aída Ródenas Derechos Reservados - 2022
         </div>
     )
 
