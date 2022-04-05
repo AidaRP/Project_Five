@@ -14,7 +14,8 @@ const Rent = (props) => {
             precio: 5,
             peliculaId: props.peliculaId,
             usuarioId: props.usuarioId,
-            fecha: "14/03/2022"
+            fecha: "14/03/2022",
+            fechaDev: "14/03/2023"
         }
 
         let config = {

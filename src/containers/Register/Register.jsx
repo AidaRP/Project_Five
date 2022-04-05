@@ -10,7 +10,7 @@ const Register = () => {
     //Hooks
     const [dataUser, setDataUser] = useState({
             name: "", surname: "", age: "",phone: "", adress: "", email: "", 
-            password: "", password2: "", nickname:"" 
+            password: "", password2: "", nick:"" 
     });
 
     const [msgError, setMsgError] = useState("");
@@ -48,7 +48,7 @@ const Register = () => {
             adress: dataUser.adress,
             email: dataUser.email,
             password: dataUser.password,
-            nickname: dataUser.nickname  
+            nick: dataUser.nick  
         }
         try {
           await axios.post("https://filmsapiprojectfour.herokuapp.com/usuarios", body);
@@ -77,7 +77,7 @@ const Register = () => {
                     <input type="email" name="email" id="email" title="email" placeholder="Correo Electrónico:" autoComplete="off" onChange={(e)=>{inputData(e)}}/>
                     <input type="password" name="password" id="password" title="password" placeholder="Contraseña" autoComplete="off" onChange={(e)=>{inputData(e)}}/>
                     <input type="password" name="password2" id="password2" title="password2" placeholder="Repite contraseña" autoComplete="off" onChange={(e)=>{inputData(e)}}/>
-                    <input type="text" name="nickname" id="nickname" title="nickname" placeholder="Nickname: " autoComplete="off" onChange={(e)=>{inputData(e)}}/>
+                    <input type="text" name="nick" id="nick" title="nick" placeholder="nick: " autoComplete="off" onChange={(e)=>{inputData(e)}}/>
                 </div>
                 <div className="bottomCardRegister">
                     {msgError}

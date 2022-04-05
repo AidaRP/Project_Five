@@ -51,7 +51,7 @@ const Header = (props) => {
             
             </div>
         )
-    }else {
+    }else if(props.credentials?.token && props.credentials?.usuario.rol === true){
         return (
             <div className='colorsHeader'>
                 <div className="headerPaint"></div>
@@ -59,7 +59,21 @@ const Header = (props) => {
                 <div className="headerPaint linksDesign">
                     <div className="link" onClick={()=>surf("/")}>🏠Home</div>
                     <div className="link" onClick={()=>surf("/films")}>Films🎥</div>
-                    <div className="link" onClick={()=>surf("/profile")}>{props.credentials?.usuario.nickname}</div>
+                    <div className="link" onClick={()=>surf("/profile")}>{props.credentials?.usuario.nick}</div>
+                    <div className="link" onClick={()=>surf("/admin")}>ADMIN🐉</div>
+                    <div className="link" onClick={()=>logOut()}>Logout</div>
+                </div>
+            </div>
+        )
+    }else{
+        return (
+            <div className='colorsHeader'>
+                <div className="headerPaint"></div>
+                <div className="headerPaint"></div>
+                <div className="headerPaint linksDesign">
+                    <div className="link" onClick={()=>surf("/")}>🏠Home</div>
+                    <div className="link" onClick={()=>surf("/films")}>Films🎥</div>
+                    <div className="link" onClick={()=>surf("/profile")}>{props.credentials?.usuario.nick}</div>
                     <div className="link" onClick={()=>logOut()}>Logout</div>
                 </div>
             </div>
