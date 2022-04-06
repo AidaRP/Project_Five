@@ -72,7 +72,7 @@ const Films = (props) => {
               //Le damos a las pelis mapeadas el onClick 
               //para que nos traiga únicamente el objeto seleccionado en el mapeo
               <div className="filmPoster" key={movie.id} onClick={()=>chooseMovie(movie)}>
-                <img className="imgColors"src={root + movie.image} alt={movie.title}/>
+                <img className="imgColors"src={root + movie.poster_path} alt={movie.title}/>
                 <div className="filmHomeTitle">
                   {/* <span src={rootTitle + movie.title}>Titulo</span> */}
                 </div>

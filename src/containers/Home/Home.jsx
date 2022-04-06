@@ -22,7 +22,7 @@ const Home = () => {
   
     return (
     <div className='colorsHome'>
-        TITULO VIDEOCLUB
+        <div className='titleHome'></div>
     </div>
   )
 }

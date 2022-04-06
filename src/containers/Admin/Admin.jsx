@@ -74,7 +74,9 @@ const Admin = (props) => {
                             return (
                                 <div key={usuarios.id} className="usuarios1" >
 
-                                    <p>id:{usuarios.id}. Nombre: {usuarios.name} Apellido: {usuarios.surname}</p>
+                                    <p>id: {usuarios.id}</p> 
+                                    <p>Nombre: {usuarios.name}</p>
+                                    <p> Apellido: {usuarios.apellido}</p>
                                 </div>
                             )
                         })
@@ -88,7 +90,12 @@ const Admin = (props) => {
                             return (
                                 <div key={pedidos.id} className="pedidos1" >
 
-                                    <p>id:{pedidos.id}. Nombre: {pedidos.name}. Pelicula:{pedidos.titulo}</p>
+                                    <p>id: {pedidos.id} </p>  
+                                    <p>Nombre: {pedidos.peliculaId}</p> 
+                                    <p>Pelicula: {pedidos.title}</p>
+                                    <p>Fecha de Alquiler: {pedidos.fecha}</p>
+                                    <p>Fecha de devolución: {pedidos.fechaDev}</p>
+                                    <p> Precio: {pedidos.precio + "€"}</p>       
                                 </div>
                             )
                         })

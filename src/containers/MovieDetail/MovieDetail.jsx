@@ -13,16 +13,18 @@ const MovieDetail = (props) => {
   let navigate = useNavigate();
   
   const [newOrders, setNewOrders] = useState({
-    precio: '', peliculaId: props.id, usuarioId: props.usuarioId, fecha: '',
+    usuarioId: props.usuarioId, peliculaId: props.usuarioId, alquilada: props.alquilada, precio: '', fecha: '', fechaDev: ''
 });
 
   const Alquilar =  async (props) => {
     console.log(props)
-        let body = {
-            precio: 5,
-            peliculaId: props.id,
-            usuarioId: props.usuarioId,
-            fecha:"2022-04-01"
+    let body = {
+          precio: "5",
+          peliculaId: props.peliculaId,
+          usuarioId: props.usuarioId,
+          alquilada: props.alquilada,
+          fecha: "2020-05-05",
+          fechaDev: "2020-05-10",
         }
         await axios.post("https://filmsapiprojectfour.herokuapp.com/orders", body);
     }
@@ -55,22 +57,20 @@ const MovieDetail = (props) => {
       </div>
     );
   } else if (props.credentials?.token) {
-    return <div className="designFilm">
-      <div className="filmDetailHalf">
-        <div className="dataFilm title">{props.search?.title}</div>
-        <div className="dataFilm">{props.search?.overview}</div>
-        <div className="dataFilm">
-          {
-            props.credentials.token && <Rent id={props.search.id} token={props.credentials.token} userId={props.credentials.user.id}/>
-          }
+    return (
+      <div className="designFilm">
+        <div className="filmDetailHalf">
+          <div className="dataFilm title">{props.search?.title}</div>
+          <div className="dataFilm">{props.search?.overview}</div>
+          <div className="dataFilm">
+          </div>
         </div>
+        <div className="filmDetailHalf image">
+          <img src={root + props.search.poster_path} alt={props.search.title} />
+        </div>
+        <div className="Alquilar" onClick={() => Alquilar()}> ¡ME LA LLEVO! </div>;
       </div>
-      <div className="filmDetailHalf image">
-        <img src={root + props.search.poster_path} alt={props.search.title} />
-      </div>
-    <div className="Alquilar" onClick={() => Alquilar()}> ¡ME LA LLEVO! </div>;
-
-    </div>;
+    );
   }
 };
 
