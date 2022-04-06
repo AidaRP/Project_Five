@@ -13,12 +13,12 @@ import './Films.scss';
 
 const Films = (props) => {
 
-  const [peliculas, setPeliculas] = useState([]);
+  const [peliculas, setPeliculas] = useState(null);
   let surf = useNavigate();
 
   useEffect(() =>{
     getMovies();
-    console.log('Films se ha montado por primera vez')
+    console.log('Films se ha montado por primera vez', peliculas)
   },[])
 
   useEffect(()=>{
@@ -35,15 +35,15 @@ const Films = (props) => {
 
     try {
 
-      let res = await axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-US&page={7}')
-      
+      let res = await axios.get('https://filmsapiprojectfour.herokuapp.com/peliculas')
+      console.log(res.data)
 
       //Guardamos los datos que hemos traido del backend arriba en un hook de esta forma 
       //los datos(pelis) estarán disponibles para los return del componente.
 
-      setTimeout(()=>{
-        setPeliculas(res.data.results);
-      },2000);
+      
+        setPeliculas(res.data);
+     
 
     } catch (error) {
       console.log(error);
@@ -61,20 +61,19 @@ const Films = (props) => {
     //donde estará disponible la información de la película
     surf("/moviedetail");
   }
-
-  if (peliculas[0]?.id !== undefined) {
+console.log(peliculas)
+  if (peliculas !== null) {
     return(
       <div className='colorsDetail'>
         {/* Hacemos el mapeo de las pelis */}
         {peliculas.map(movie => {
-            //cada elemento del mapeo recibirá un KEY único para distinguirlos
+            // cada elemento del mapeo recibirá un KEY único para distinguirlos
+            // Le damos a las pelis mapeadas el onClick 
+            // para que nos traiga únicamente el objeto seleccionado en el mapeo
             return (
-              //Le damos a las pelis mapeadas el onClick 
-              //para que nos traiga únicamente el objeto seleccionado en el mapeo
               <div className="filmPoster" key={movie.id} onClick={()=>chooseMovie(movie)}>
-                <img className="imgColors"src={root + movie.poster_path} alt={movie.title}/>
+                <img className="imgColors"src={root + movie.image} alt={movie.title}/>
                 <div className="filmHomeTitle">
-                  {/* <span src={rootTitle + movie.title}>Titulo</span> */}
                 </div>
               </div>
             )

@@ -5,29 +5,41 @@ import { useNavigate } from "react-router-dom";
 import Rent from "../../components/Rent/Rent";
 import { root } from "../../utilities";
 
-
 import "./MovieDetail.scss";
 
 const MovieDetail = (props) => {
-  
   let navigate = useNavigate();
-  
-  const [newOrders, setNewOrders] = useState({
-    usuarioId: props.usuarioId, peliculaId: props.usuarioId, alquilada: props.alquilada, precio: '', fecha: '', fechaDev: ''
-});
 
-  const Alquilar =  async (props) => {
-    console.log(props)
+
+  const Alquilar = async () => {
+    console.log(props);
     let body = {
-          precio: "5",
-          peliculaId: props.peliculaId,
-          usuarioId: props.usuarioId,
-          alquilada: props.alquilada,
-          fecha: "2020-05-05",
-          fechaDev: "2020-05-10",
-        }
-        await axios.post("https://filmsapiprojectfour.herokuapp.com/orders", body);
+      precio: "5",
+      peliculaId: props.search.id,
+      usuarioId: props.credentials.usuario.id,
+      alquilada: true,
+      fecha: "2020-05-05",
+      fechaDev: "2020-05-10",
+    };
+    console.log(body);
+    try {
+      let res = await axios.post(
+        "https://filmsapiprojectfour.herokuapp.com/orders",
+        body
+      );
+      if (res.status === 200) {
+        alert("Pelicula alquilada con éxito");
+        setTimeout(() => {
+          navigate("/films");
+        });
+      }
+
+        
+      console.log(res.body, res.status);
+    } catch (error) {
+      console.log("tus muertos", error.response, error);
     }
+  };
 
   useEffect(() => {
     if (props.search?.title === undefined) {
@@ -52,7 +64,7 @@ const MovieDetail = (props) => {
           </div>
         </div>
         <div className="filmDetailHalf image">
-          <img src={root + props.search.poster_path} alt={props.search.title} />
+          <img src={root + props.search.image} alt={props.search.title} />
         </div>
       </div>
     );
@@ -61,14 +73,17 @@ const MovieDetail = (props) => {
       <div className="designFilm">
         <div className="filmDetailHalf">
           <div className="dataFilm title">{props.search?.title}</div>
-          <div className="dataFilm">{props.search?.overview}</div>
-          <div className="dataFilm">
-          </div>
+          <div className="dataFilm">{props.search?.synopsis}</div>
+          <div className="dataFilm"></div>
         </div>
         <div className="filmDetailHalf image">
-          <img src={root + props.search.poster_path} alt={props.search.title} />
+          <img src={root + props.search.image} alt={props.search.title} />
         </div>
-        <div className="Alquilar" onClick={() => Alquilar()}> ¡ME LA LLEVO! </div>;
+        <div className="Alquilar" onClick={() => Alquilar()}>
+          {" "}
+          ¡ME LA LLEVO!{" "}
+        </div>
+        {<div className="alqMess"></div>}
       </div>
     );
   }
