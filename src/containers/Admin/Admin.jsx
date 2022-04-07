@@ -68,7 +68,7 @@ const Admin = (props) => {
         return (
             <div className="colorsAdmin">
                 <div className='listaUsuarios'>
-                    <p>LISTA DE TODOS LOS USUARIOS</p>
+                    <div className="titleAdminU"><p>LISTA DE TODOS LOS USUARIOS</p></div>
                     {
                         usuarios.map(usuarios => {
                             return (
@@ -84,7 +84,7 @@ const Admin = (props) => {
                 </div>
 
                 <div className='listaPedidos'>
-                    <p>LISTA DE TODOS LOS PEDIDOS</p>
+                <div className="titleAdminO"><p>LISTA DE TODOS LOS PEDIDOS</p></div>
                     {
                         pedidos.map(pedidos => {
                             return (

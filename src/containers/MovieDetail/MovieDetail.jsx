@@ -71,7 +71,7 @@ const MovieDetail = (props) => {
       <div className="designFilm">
         <div className="filmDetailHalf">
           <div className="dataFilm title">{props.search?.title}</div>
-          <div className="dataFilm"><p>{props.search?.synopsis}</p></div>
+          <div className="dataFilm synopsis">{props.search?.synopsis}</div>
           <div className="dataFilm"></div>
         </div>
         <div className="filmDetailHalf image">

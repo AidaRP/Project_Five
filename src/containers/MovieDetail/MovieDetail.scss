@@ -14,16 +14,28 @@
 }
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 .Alquilar{
-    background-color: rgb(253, 115, 227);
+    background-color: rgba(253, 115, 228, 0.322);
+    cursor:pointer;
+    width: 9.5vw;
+
+    display: flex;
+    justify-content: center;
     
 }
 .Alquilar:hover {
     font-weight: bold;
-    cursor:pointer;
 
-    background-color: rgb(204, 135, 191);
+    background-color: rgb(255, 0, 208);
 }
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+.filmDetailHalf{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
 .designFilm{
     background-image: url('../../img/fondito.jpg');
     background-size: cover;
@@ -31,12 +43,14 @@
     height: 80.3vh;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
 
-    
+    //Ajuste de imagen dentro del círculo de neón
+    padding-top: 10vh;    
 
 }
 
@@ -45,6 +59,20 @@
     align-items: center;
     justify-content: center;
 
-    position: absolute;
+    font-size: 3.5vh;
+    font-weight: 600;
   
+}
+.synopsis{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 25vw;
+    
+  
+}
+
+.image{
+    width: 25vw;
 }
