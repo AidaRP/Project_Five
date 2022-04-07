@@ -24,6 +24,9 @@
     justify-content: center;
     align-items: center;
 
+    background-image: url(../../img/fondo_2.jpg);
+    background-size:cover ;
+
    
 
 }
@@ -34,6 +37,8 @@
 
 .colorsDetail>*{
     flex-basis: 20%;
+
+    
 }
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -45,8 +50,8 @@
     height: 20em;
     width: 9em;
 
-    // background-image: url(/frontvideoclub/src/img/filmFondo.gif);
-    background-color: rgb(153, 153, 153);
+    background-image: url('../../img/star_fall.gif');
+  
 
     margin: .2em;
 
@@ -58,7 +63,7 @@
     flex-direction: row;
     justify-content: center;
 
-    color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
     font-weight: bold;
 }
 

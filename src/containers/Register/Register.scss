@@ -16,17 +16,36 @@
 
 //---------------------------------------------------------------Register Container----------------------------------------------------------------------------------
 .buttonRegister{
-    background-color: rgb(255, 32, 2);
+    background-color: rgb(174, 0, 255);
     color: rgb(255, 255, 255);
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    
+
     cursor: pointer;
 
-    height: 1.5vh;
+    height: 4vh;
     width: 5vw;
+
+    margin-left: 45em;
+    margin-top: 3em;
+}
+.buttonRegister:hover {
+    font-weight: bold;
+    cursor:pointer;
+
+    background-color: rgb(121, 49, 154);
 }
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+.upCardRegister{
+    color: aliceblue;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 3%;
+}

@@ -3,7 +3,7 @@
 
 .colorsMovieDetail{
     
-    background-image: url('../../img/Pant.jpg');
+    background-image: url('../../img/fondo_2.jpg');
     background-size: cover;
 
     height: 80.3vh;
@@ -14,24 +14,29 @@
 }
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 .Alquilar{
-    background-color: red;
+    background-color: rgb(253, 115, 227);
     
 }
-// .Alquilar:hover{
-//     background-color: rgb(183, 62, 62);
-    
-// }
+.Alquilar:hover {
+    font-weight: bold;
+    cursor:pointer;
+
+    background-color: rgb(204, 135, 191);
+}
 
 .designFilm{
-    background-image: url('../../img/Pant.jpg');
+    background-image: url('../../img/filmFondo.gif');
     background-size: cover;
 
     height: 80.3vh;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    color: white;
+    color: rgb(255, 0, 0);
+
+    
 
 }
 
