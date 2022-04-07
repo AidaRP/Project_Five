@@ -1,4 +1,3 @@
-
 // import React from 'react'
 
 // import './Home.scss'
@@ -14,21 +13,19 @@
 
 // export default Home;
 
-import React from 'react'
+import React from "react";
 
-import './Home.scss'
+import "./Home.scss";
 
 const Home = () => {
-  
-    return (
-    <div className='colorsHome'>
-        <div className='titleHome'> <img src="../../img/Aidi.png" alt="" /></div>
+  return (
+    <div className="colorsHome">
+      <div className="titleHome">
+        {" "}
+        <img src="../../img/Aidi.png" alt="" />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default (Home);
-
-
-
-
+export default Home;

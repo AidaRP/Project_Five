@@ -1,13 +1,10 @@
-import React, { useNavigate } from 'react-router-dom'
+import React, { useNavigate } from "react-router-dom";
 
 const RestrictArea = ({ valueTrue }) => {
+  let surf = useNavigate();
 
-let surf = useNavigate();
-
-const user = localStorage.getItem("user");
-return user ? valueTrue : surf("/login");
-
-
+  const user = localStorage.getItem("user");
+  return user ? valueTrue : surf("/login");
 };
 
 export default RestrictArea;
