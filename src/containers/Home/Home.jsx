@@ -22,7 +22,7 @@ const Home = () => {
   
     return (
     <div className='colorsHome'>
-        <div className='titleHome'></div>
+        <div className='titleHome'> <img src="../../img/Aidi.png" alt="" /></div>
     </div>
   )
 }

@@ -88,6 +88,7 @@ console.log(peliculas)
           <img src={require('../../img/robot_loader.gif')} alt="Loader"/>
         </div>
       </div>
+          
     )
   }
 }

@@ -3,10 +3,8 @@
 
 .colorsMovieDetail{
     
-    background-color: lightskyblue;
-
-    color: rgb(255, 255, 255);
-
+    background-image: url('../../img/Pant.jpg');
+    background-size: cover;
 
     height: 80.3vh;
 
@@ -23,3 +21,25 @@
 //     background-color: rgb(183, 62, 62);
     
 // }
+
+.designFilm{
+    background-image: url('../../img/Pant.jpg');
+    background-size: cover;
+
+    height: 80.3vh;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+  
+}

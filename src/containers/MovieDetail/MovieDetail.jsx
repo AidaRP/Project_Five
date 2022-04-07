@@ -10,7 +10,6 @@ import "./MovieDetail.scss";
 const MovieDetail = (props) => {
   let navigate = useNavigate();
 
-
   const Alquilar = async () => {
     console.log(props);
     let body = {
@@ -34,7 +33,6 @@ const MovieDetail = (props) => {
         });
       }
 
-        
       console.log(res.body, res.status);
     } catch (error) {
       console.log("tus muertos", error.response, error);
@@ -52,7 +50,7 @@ const MovieDetail = (props) => {
       <div className="designFilm">
         <div className="filmDetailHalf">
           <div className="dataFilm title">{props.search?.title}</div>
-          <div className="dataFilm">{props.search?.overview}</div>
+          <div className="dataFilm synopsis">{props.search?.synopsis}</div>
           <div className="dataFilm">
             {props.credentials.token && (
               <Rent

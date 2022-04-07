@@ -78,7 +78,10 @@
 }
 
 .titleHome{
-    object-fit: url('../../img/Aidi.png');
-    background-color: aqua;
-    width: 100vw;
+    background-image:url(../../img/Aidi.png);
+    
+    width: 70vw;
+    height: 20vh;
+
+    background-size: cover;
 }
